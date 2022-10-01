@@ -1,6 +1,6 @@
-const StepService = require('./step.service');
-const restAPI = require('./rest-api');
-const wsServerAPI = require('./wsServer-api');
+const StepService = require("./step.service");
+const restAPI = require("./rest-api");
+const wsServerAPI = require("./wsServer-api");
 
 module.exports = class StepTracker {
   constructor(store) {
@@ -11,6 +11,8 @@ module.exports = class StepTracker {
     }
 
     const stepService = StepService(this.store);
+
+    console.log("stepService", stepService);
 
     // Start serving the REST API
     restAPI(stepService);

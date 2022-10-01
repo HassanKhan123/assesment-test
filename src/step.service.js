@@ -17,7 +17,11 @@ module.exports = function stepService(store) {
     //     cumulativeSteps: 587,
     //   },
     // }
+  };
 
+  service.update = (cumulativeSteps, ts, username) => {
+    store[username] = { ts, cumulativeSteps };
+    return store;
   };
 
   return service;
