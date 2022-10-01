@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "start": "node run.js",
+    "dev": "nodemon run.js",
     "test": "node test.js",
     "test:watch": "chokidar \"**/*.js\" -c \"npm test\" --silent --initial --ignore node_modules"
   },
@@ -10,7 +11,8 @@
     "chokidar-cli": "2.1.0",
     "jasmine": "^3.5.0",
     "jasmine-console-reporter": "^3.1.0",
-    "jasmine-reporters": "^2.3.2"
+    "jasmine-reporters": "^2.3.2",
+    "nodemon": "^2.0.20"
   },
   "dependencies": {
     "@hapi/hapi": "^19.1.1",
